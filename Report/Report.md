@@ -1,14 +1,20 @@
-# Module 12 Report Template
+# Supervised Machine Learning Report Template
 
 ## Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
+**Purpose:**
 
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
+The Purpose of this analysis was to create a prediction model, which can be utilized to analyze credit worthiness of borrowers for the bank to putline any potential defaults.
+
+The dataset provided contained just over 77,500 entried with specific indicators which are: Loan Size, Interest Rate,  Borrower's Income,  Number of regular payments for Borrower ,Detrimental factors on credit reportsand finally Borrowers total debt.
+
+Within the dataset 3.2% of the total loans are in default. This was determined looking into the Loan Status columnn. The total value of loans amounted to over $760 Million, with over $46 Million. Default loans account for 6.08%, which when comapred to the total value could be seen as reasonable loss, however the bank has a duty to shareholders to reduce the amount wherever possible.
+
+Initial steps involved removing the loan status column and storing in a seperate DataFrame, furthering on data features were split into training/ testing data, with a 75/25% split. Training Data was used in a Logistrical Regression model, resulting in a sctore of 0.99212 and testing score of 0.99184 which was used to predict test data and indiactors generated for balanced accuracy score, confusion matrix and class report.
+
+Testing data then underwent random oversampling of the loan default status, with the purpose being to over-represent default loans to test the models predictive capabilities, the resulting data was composed of equal points for both healthy (0) and default(1) loans. A model was fit using Logistrical regression for resampled data which was then used to test Original data again. Further anlaysis was done on the feature data using StandardScalar, this prediction model yielded higher accruacy results than using raw data. Balanced accuracy increased by .379, precision dropped by 1% with recall incresing by 7%. The confusion matrix demonstrated a drop in false positives however false negatives did also increase. 
+
+Therefore although the oversampled scaled data was accurate to 99% it demonstrated insignificant improvement over the use of raw data with the numbers being very similar, due to the drastic increase in false negatives rising, my recommendation would have been to continue using raw data when predicting.
 
 ## Results
 
