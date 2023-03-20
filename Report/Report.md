@@ -1,4 +1,5 @@
-# Supervised Machine Learning Report Template
+# Module 20 Supervised Machine Learning Report
+
 
 ## Overview of the Analysis
 
@@ -20,18 +21,37 @@ Therefore although the oversampled scaled data was accurate to 99% it demonstrat
 
 Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
 
-* Machine Learning Model 1:
-  * Description of Model 1 Accuracy, Precision, and Recall scores.
+Machine Learning Model 1: Logistic Regression using data and Random Oversampling:
 
+  Balanced Accuracy Score 0.9889115309798473
+* Confusion Matrix results 
+  
+  True positive:  18652 
+  
+  False positive: 10
+  
+  True negative:  609
+ 
+  False negative: 113
 
+![Alt text](Images/img2.png)
 
-* Machine Learning Model 2:
-  * Description of Model 2 Accuracy, Precision, and Recall scores.
+* Machine Learning Model 2: Logistic Regression using scaled data and Random Oversampling:
+* Confusion Matrix results 
+  
+  True positive:  18640
+  
+  False positive: 4
+  
+  True negative:  615
+ 
+  False negative: 125
+
+![Alt text](Images/img3.png)
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+The main model used in this exercise was Logistic Regression with additional testing done with the model using scaled data and Random Oversampling. Testing yielded similar results in which 99% accuracy was adhered to. In the random sampling data, 4 false negatives were produced. However increased false positives were also produced. 
 
-If you do not recommend any of the models, please justify your reasoning.
+Increased accutacy of the model predicting healthy loans would allow the bank to restructure resources to areas in which they're needed to reduce the losses. With the prediction of healthy loans being acccurate, resources could focus on to use other measures in assessing health of loans and not solely rely on the model.
+
