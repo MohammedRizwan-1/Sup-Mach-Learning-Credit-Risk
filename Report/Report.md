@@ -37,6 +37,8 @@ Machine Learning Model 1: Logistic Regression using data and Random Oversampling
 ![Alt text](Images/img2.png)
 
 * Machine Learning Model 2: Logistic Regression using scaled data and Random Oversampling:
+
+  Balanced Accuracy Score 0.9934383134311076
 * Confusion Matrix results 
   
   True positive:  18640
